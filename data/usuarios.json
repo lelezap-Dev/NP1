@@ -1,0 +1,23 @@
+[
+    {
+        "cpf": "457",
+        "nome": "lele",
+        "email": "lele@",
+        "senha": "$2b$12$CeFx8pVPUdO/FSHMVPZrAuhepMRxalaPafGsQ4Y3F.UBhtiEDUheu",
+        "perfil": "Aluno"
+    },
+    {
+        "cpf": "899",
+        "nome": "tron",
+        "email": "tron@",
+        "senha": "$2b$12$Gn6Y/K/m3H3x/bXYJ45eRONLVAVkeUQlpxCgtON0ReO4Vq59xCBlm",
+        "perfil": "Instrutor"
+    },
+    {
+        "cpf": "574",
+        "nome": "uiuiui",
+        "email": "uiui@",
+        "senha": "$2b$12$xyunIak8LJP6wK/6.G8teuP5p0Qjl/tPD8hS3QZWmYDztM8BVBiJu",
+        "perfil": "Administrador"
+    }
+]

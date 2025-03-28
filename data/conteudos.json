@@ -1,0 +1,83 @@
+[
+    {
+        "tema": "Tecnologia Da Informa\u00e7\u00e3o",
+        "titulo": "Introdu\u00e7\u00e3o \u00e0 TI",
+        "descricao": "Conceitos b\u00e1sicos sobre Tecnologia da Informa\u00e7\u00e3o.",
+        "perguntas": [
+            {
+                "pergunta": "O que significa a sigla TI?",
+                "resposta_correta": "Tecnologia da Informa\u00e7\u00e3o",
+                "alternativas": [
+                    "Tecnologia da Informa\u00e7\u00e3o",
+                    "T\u00e9cnica Industrial",
+                    "Teoria da Informa\u00e7\u00e3o",
+                    "Trabalho Integrado"
+                ]
+            },
+            {
+                "pergunta": "Qual \u00e9 a principal fun\u00e7\u00e3o da TI em uma empresa?",
+                "resposta_correta": "Gerenciar e processar informa\u00e7\u00f5es",
+                "alternativas": [
+                    "Gerenciar e processar informa\u00e7\u00f5es",
+                    "Produzir bens materiais",
+                    "Controlar a log\u00edstica",
+                    "Administrar recursos financeiros"
+                ]
+            }
+        ]
+    },
+    {
+        "tema": "Programa\u00e7\u00e3o B\u00e1sica",
+        "titulo": "Fundamentos da Programa\u00e7\u00e3o",
+        "descricao": "Introdu\u00e7\u00e3o aos conceitos fundamentais de programa\u00e7\u00e3o.",
+        "perguntas": [
+            {
+                "pergunta": "Qual linguagem \u00e9 comumente usada para iniciar na programa\u00e7\u00e3o?",
+                "resposta_correta": "Python",
+                "alternativas": [
+                    "Python",
+                    "Assembly",
+                    "C++",
+                    "Ruby"
+                ]
+            },
+            {
+                "pergunta": "O que \u00e9 um loop em programa\u00e7\u00e3o?",
+                "resposta_correta": "Uma estrutura de repeti\u00e7\u00e3o",
+                "alternativas": [
+                    "Uma estrutura de repeti\u00e7\u00e3o",
+                    "Uma fun\u00e7\u00e3o de c\u00e1lculo",
+                    "Um m\u00e9todo de ordena\u00e7\u00e3o",
+                    "Um sistema de seguran\u00e7a"
+                ]
+            }
+        ]
+    },
+    {
+        "tema": "Seguran\u00e7a Digital",
+        "titulo": "Boas Pr\u00e1ticas de Seguran\u00e7a Digital",
+        "descricao": "Aprenda como proteger seus dados na internet.",
+        "perguntas": [
+            {
+                "pergunta": "O que \u00e9 um firewall?",
+                "resposta_correta": "Uma barreira de seguran\u00e7a para redes",
+                "alternativas": [
+                    "Uma barreira de seguran\u00e7a para redes",
+                    "Um software de edi\u00e7\u00e3o de v\u00eddeos",
+                    "Um antiv\u00edrus",
+                    "Um sistema de backup"
+                ]
+            },
+            {
+                "pergunta": "Qual \u00e9 uma boa pr\u00e1tica para criar senhas seguras?",
+                "resposta_correta": "Usar combina\u00e7\u00f5es de letras, n\u00fameros e s\u00edmbolos",
+                "alternativas": [
+                    "Usar combina\u00e7\u00f5es de letras, n\u00fameros e s\u00edmbolos",
+                    "Utilizar apenas n\u00fameros",
+                    "Reutilizar a mesma senha",
+                    "Anotar senhas em locais p\u00fablicos"
+                ]
+            }
+        ]
+    }
+]
