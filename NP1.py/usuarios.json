@@ -22,5 +22,17 @@
         "email": "lele@z.com",
         "senha": "dae745f273d3cec6476f52ddeda38d5694547aa62f8908a5682676272972f171",
         "tipo": "usuario"
+    },
+    {
+        "nome": "lele",
+        "email": "lele@m.com",
+        "senha": "a53caec444e0d09593e40c09f8efcd921c1aff384e13df7744318fcef1eea9cb",
+        "tipo": "usuario"
+    },
+    {
+        "nome": "lelePO",
+        "email": "lelepo@a.com",
+        "senha": "1b8f357872d286f05c67a22d4b9ee548e3c65a857a49653474c70ef3feae504a",
+        "tipo": "usuario"
     }
 ]

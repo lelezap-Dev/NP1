@@ -128,7 +128,7 @@ class SistemaEducacional:
 
         email = input("Digite seu email: ").strip()
         while not self.validar_email(email):
-            print("Email inválido. Use o formato: exemplo@dominio.com")
+            print("Email inválido. Use o formato: leandro@dominio.com")
             email = input("Digite seu email: ").strip()
 
         if any(usuario['email'] == email for usuario in self.usuarios):
@@ -338,8 +338,6 @@ class SistemaEducacional:
             else:
                 print("\nOpção inválida. Tente novamente.")
                 time.sleep(1)
-
-# Adicione este código no final do arquivo
 if __name__ == "__main__":
     try:
         sistema = SistemaEducacional()

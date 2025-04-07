@@ -19,5 +19,12 @@
         "email": "uiui@",
         "senha": "$2b$12$xyunIak8LJP6wK/6.G8teuP5p0Qjl/tPD8hS3QZWmYDztM8BVBiJu",
         "perfil": "Administrador"
+    },
+    {
+        "cpf": "3322",
+        "nome": "lelelele",
+        "email": "lele@z.com",
+        "senha": "$2b$12$Xj4kd0WS42D/vyWLOTenhObVarwJqqZrkl2rXxPQXR0xGxoPHY1aC",
+        "perfil": "Aluno"
     }
 ]
