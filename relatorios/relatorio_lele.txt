@@ -1,0 +1,15 @@
+Relatório de Desempenho
+Nome: lele
+CPF: 38630096810
+Perfil: Aluno
+
+Atividades:
+- Conteúdo: Introdução à TI | Acertos: 2 de 2
+- Conteúdo: Fundamentos da Programação | Acertos: 2 de 2
+- Conteúdo: Boas Práticas de Segurança Digital | Acertos: 2 de 2
+
+Resumo:
+Total de Atividades: 3
+Média de Acertos: 2.0
+Maior Nota: 2
+Menor Nota: 2

@@ -79,5 +79,22 @@
                 ]
             }
         ]
+    },
+    {
+        "tema": "Ti",
+        "titulo": "Soft Skils",
+        "descricao": "Habilidades que n\u00e3o requer nenhuma faculdade ou curso para se adequar, apenas se manter comportado e adequado no ambiente de trabalho, trazendo consigo harmonia para a equipe.",
+        "perguntas": [
+            {
+                "pergunta": "Soft skils \u00e9 um requisito solicitado como principal para ser contratado?",
+                "resposta_correta": "N\u00e3o, no entanto, possuir essas habilidades fazem de voce, diferente dos demais",
+                "alternativas": [
+                    "N\u00e3o, no entanto, possuir essas habilidades fazem de voce, diferente dos demais",
+                    "Sim, \u00e9 essencial e um dos requisitos minimos para qualquer empresa",
+                    "Sim, \u00e9 frequentemente usado em empresa de pequeno porte, ja que as demais, nem sequer ligam para isso",
+                    "N\u00e3o, definitivamente isso n\u00e3o \u00e9 sequer necessario para a convivencia humana"
+                ]
+            }
+        ]
     }
 ]

@@ -1,0 +1,31 @@
+{
+    "nome": "lele",
+    "cpf": "38630096810",
+    "perfil": "Aluno",
+    "atividades": [
+        {
+            "cpf": "38630096810",
+            "conteudo": "Introdu\u00e7\u00e3o \u00e0 TI",
+            "acertos": 2,
+            "total": 2
+        },
+        {
+            "cpf": "38630096810",
+            "conteudo": "Fundamentos da Programa\u00e7\u00e3o",
+            "acertos": 2,
+            "total": 2
+        },
+        {
+            "cpf": "38630096810",
+            "conteudo": "Boas Pr\u00e1ticas de Seguran\u00e7a Digital",
+            "acertos": 2,
+            "total": 2
+        }
+    ],
+    "resumo": {
+        "total_atividades": 3,
+        "media_acertos": 2.0,
+        "maior_nota": 2,
+        "menor_nota": 2
+    }
+}
