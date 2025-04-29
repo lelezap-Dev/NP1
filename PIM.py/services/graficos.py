@@ -8,6 +8,7 @@ import statistics
 def gerar_grafico_media_usuarios():
     resultados = carregar_resultados()
     usuarios = carregar_usuarios()
+
     if not resultados:
         print("Nenhum dado disponível para gerar gráfico.")
         return
@@ -18,13 +19,22 @@ def gerar_grafico_media_usuarios():
         dados[nomes_usuarios.get(r['cpf'], r['cpf'])].append(r['acertos'])
 
     labels = list(dados.keys())
-    medias = [sum(v)/len(v) for v in dados.values()]
+    medias = [round(sum(v)/len(v), 2) for v in dados.values()]
+    todas_as_notas = [nota for sublist in dados.values() for nota in sublist]
+
+    # Calcular moda, média e mediana geral
+    media_geral = round(statistics.mean(todas_as_notas), 2)
+    try:
+        moda_geral = statistics.mode(todas_as_notas)
+    except statistics.StatisticsError:
+        moda_geral = 'Sem moda única'
+    mediana_geral = statistics.median(todas_as_notas)
 
     plt.figure(figsize=(10,6))
     plt.bar(labels, medias, color='skyblue')
     plt.xlabel('Usuário')
     plt.ylabel('Média de Acertos')
-    plt.title('Média de Acertos por Usuário')
+    plt.title(f'Média | Moda: {moda_geral} | Mediana: {mediana_geral}')
     plt.xticks(rotation=45)
     plt.tight_layout()
     plt.show()

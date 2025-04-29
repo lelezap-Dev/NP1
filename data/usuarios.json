@@ -54,5 +54,40 @@
         "email": "admin@g.com",
         "senha": "$2b$12$ylhdSNq0D40u9vN91rLxF.dWSCf6O6aJekkQzMVyLy0goLDvTDrJ.",
         "perfil": "Administrador"
+    },
+    {
+        "cpf": "12345678900",
+        "nome": "dede",
+        "email": "dede@gmail.com",
+        "senha": "$2b$12$7gRm0dm7452DCCqUe31Ls.zpTKiUeAh4WiLQ7a20pShPcDha2pGJ.",
+        "perfil": "Aluno"
+    },
+    {
+        "cpf": "12345678911",
+        "nome": "admin",
+        "email": "admin@g.com",
+        "senha": "$2b$12$1eaermySkQc2OGnvl523c.FYjIwoqA4LE9SBFi6GZRf/gYq45lf6K",
+        "perfil": "Administrador"
+    },
+    {
+        "cpf": "11111111111",
+        "nome": "lelezorpinho",
+        "email": "lele@g.cmo",
+        "senha": "$2b$12$FCrYnIv08JStsac1XN63De228fX8oSocXqO.iNvrfHLqnllE9xJle",
+        "perfil": "Aluno"
+    },
+    {
+        "cpf": "99999999999",
+        "nome": "bizantino",
+        "email": "biza@slk.com",
+        "senha": "$2b$12$3ue4gEA8mWIV.DQjAKrDUeqcNsTHXCSynOMiQ/BV/UXb.Sqx67ph.",
+        "perfil": "Administrador"
+    },
+    {
+        "cpf": "88888888888",
+        "nome": "adminzin",
+        "email": "lele@g.com",
+        "senha": "$2b$12$yzKOEXGli88mHkBHhYMqR.8.r0gMnJlJruFcjN/E/iLp1dHxqSM3W",
+        "perfil": "Administrador"
     }
 ]

@@ -9,6 +9,9 @@ from services.graficos import (
 )
 from services.relatorios import exportar_relatorio_txt
 from services.relatorios import exportar_relatorio_txt, exportar_relatorio_json
+from services.conteudos import criar_conteudo, visualizar_conteudos, deletar_conteudo
+from services.sessoes import registrar_login, registrar_logout, exibir_sessoes_usuario
+
 
 def menu_aluno(usuario):
     while True:
@@ -26,6 +29,7 @@ def menu_aluno(usuario):
         elif op == '3':
             relatorio_pessoal(usuario['cpf'])
         elif op == '4':
+            registrar_logout(usuario['cpf'])
             break
         else:
             print('Opção inválida.')
@@ -39,8 +43,9 @@ def menu_administrador(usuario):
         print('4. Gráfico: distribuição de acertos')
         print('5. Gráfico: desempenho por conteúdo')
         print('6. Exportar relatório em TXT')
-        print('7. Exportar relatório em JSON')
-        print('8. Sair')
+        print('7. Deletar conteúdo')
+        print('8. Exportar relatório em JSON')
+        print('9. Sair')
         op = input('Escolha: ')
 
         if op == '1':
@@ -58,9 +63,12 @@ def menu_administrador(usuario):
             cpf = input('Digite o CPF do usuário para exportar TXT: ')
             exportar_relatorio_txt(cpf)
         elif op == '7':
-            cpf = input('Digite o CPF do usuário para exportar JSON: ')
-            exportar_relatorio_json(cpf)
+            deletar_conteudo()
         elif op == '8':
+            cpf = input('Digite o CPF do usuário para exportar (JSON): ')
+            exportar_relatorio_json(cpf)
+        elif op == '9':
+            registrar_login(usuario['cpf'])
             break
         else:
             print('Opção inválida.')

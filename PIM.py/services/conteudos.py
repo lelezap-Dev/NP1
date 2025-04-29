@@ -21,17 +21,46 @@ def criar_conteudo():
             break
         print('Tema inválido. Tente novamente.')
 
-    titulo = input('Título: ')
-    descricao = input('Descrição do conteúdo para estudo: ')
+    while True:
+        titulo = input('Título: ').strip()
+        if titulo:
+            break
+        print('Título não pode ser vazio.')
+
+    while True:
+        descricao = input('Descrição do conteúdo para estudo: ').strip()
+        if descricao:
+            break
+        print('Descrição não pode ser vazia.')
+
     perguntas = []
     while True:
-        pergunta = input('Pergunta (enter para sair): ')
-        if not pergunta: break
-        correta = input('Resposta correta: ')
-        alternativas = [correta] + [input(f'Outra alternativa ({i+1}/3): ') for i in range(3)]
-        perguntas.append({ 'pergunta': pergunta, 'resposta_correta': correta, 'alternativas': alternativas })
+        pergunta = input('Digite uma pergunta (ou pressione Enter para finalizar): ').strip()
+        if not pergunta:
+            if perguntas:
+                break
+            else:
+                print('É necessário ter pelo menos uma pergunta!')
+                continue
 
-    conteudos.append({ 'tema': tema, 'titulo': titulo, 'descricao': descricao, 'perguntas': perguntas })
+        resposta_correta = input('Resposta correta: ').strip()
+        alternativas = [resposta_correta]
+        for i in range(3):
+            alt = input(f'Digite outra alternativa ({i+1}/3): ').strip()
+            alternativas.append(alt)
+        
+        perguntas.append({
+            'pergunta': pergunta,
+            'resposta_correta': resposta_correta,
+            'alternativas': alternativas
+        })
+
+    conteudos.append({
+        'tema': tema,
+        'titulo': titulo,
+        'descricao': descricao,
+        'perguntas': perguntas
+    })
     salvar_conteudos(conteudos)
     print('Conteúdo criado com sucesso!')
 
@@ -39,3 +68,30 @@ def visualizar_conteudos():
     conteudos = carregar_conteudos()
     for c in conteudos:
         print(f"\nTítulo: {c['titulo']}\nTema: {c['tema']}\nDescrição: {c['descricao']}\n")
+        
+def deletar_conteudo():
+    conteudos = carregar_conteudos()
+    if not conteudos:
+        print('Nenhum conteúdo disponível para exclusão.')
+        return
+
+    print('\n--- Conteúdos Disponíveis ---')
+    for idx, c in enumerate(conteudos):
+        print(f"{idx+1}. {c['titulo']} - {c['tema']}")
+
+    try:
+        escolha = int(input('Digite o número do conteúdo que deseja excluir: ')) - 1
+        if escolha < 0 or escolha >= len(conteudos):
+            print('Opção inválida.')
+            return
+
+        confirmacao = input(f"Tem certeza que deseja excluir '{conteudos[escolha]['titulo']}'? (s/n): ").lower()
+        if confirmacao == 's':
+            conteudos.pop(escolha)
+            salvar_conteudos(conteudos)
+            print('Conteúdo excluído com sucesso!')
+        else:
+            print('Exclusão cancelada.')
+
+    except ValueError:
+        print('Entrada inválida.')

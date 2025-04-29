@@ -7,9 +7,11 @@ Atividades:
 - Conteúdo: Introdução à TI | Acertos: 2 de 2
 - Conteúdo: Fundamentos da Programação | Acertos: 2 de 2
 - Conteúdo: Boas Práticas de Segurança Digital | Acertos: 2 de 2
+- Conteúdo: Boas Práticas de Segurança Digital | Acertos: 0 de 2
+- Conteúdo: Fundamentos da Programação | Acertos: 0 de 2
 
 Resumo:
-Total de Atividades: 3
-Média de Acertos: 2.0
+Total de Atividades: 5
+Média de Acertos: 1.2
 Maior Nota: 2
-Menor Nota: 2
+Menor Nota: 0

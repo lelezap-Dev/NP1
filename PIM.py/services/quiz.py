@@ -48,29 +48,24 @@ def responder_conteudo(usuario):
     resultados.append({ 'cpf': usuario['cpf'], 'conteudo': conteudos[escolha]['titulo'], 'acertos': pontuacao, 'total': total })
     salvar_resultados(resultados)
 
-def relatorio_usuario(cpf, solicitante):
-    if solicitante['perfil'] != 'Administrador':
-        print('Acesso negado. Apenas administradores podem ver relatórios de outros usuários.')
-        return
-
+def relatorio_pessoal(cpf):
     resultados = carregar_resultados()
     user_results = [r for r in resultados if r['cpf'] == cpf]
+
     if not user_results:
         print('Nenhum resultado encontrado.')
         return
 
     acertos = [r['acertos'] for r in user_results]
-    relatorio = {
-        'cpf': cpf,
-        'total_atividades': len(user_results),
-        'media_acertos': round(sum(acertos)/len(acertos), 2),
-        'maior_nota': max(acertos),
-        'menor_nota': min(acertos)
-    }
-    print(json.dumps(relatorio, indent=4))
 
+    print('\n📋 Relatório de Desempenho:')
+    print(f"- Total de Atividades Realizadas: {len(user_results)}")
+    print(f"- Média de Acertos: {round(sum(acertos) / len(acertos), 2)}")
+    print(f"- Maior Nota: {max(acertos)}")
+    print(f"- Menor Nota: {min(acertos)}")
+    print("\nContinue estudando para melhorar ainda mais! 🚀")
 
-def relatorio_pessoal(cpf):
+def relatorio_usuario(cpf):
     resultados = carregar_resultados()
     user_results = [r for r in resultados if r['cpf'] == cpf]
     if not user_results:

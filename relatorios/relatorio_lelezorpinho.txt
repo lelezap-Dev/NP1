@@ -1,0 +1,14 @@
+Relatório de Desempenho
+Nome: lelezorpinho
+CPF: 11111111111
+Perfil: Aluno
+
+Atividades:
+- Conteúdo: Introdução à TI | Acertos: 1 de 2
+- Conteúdo: Fundamentos da Programação | Acertos: 2 de 2
+
+Resumo:
+Total de Atividades: 2
+Média de Acertos: 1.5
+Maior Nota: 2
+Menor Nota: 1

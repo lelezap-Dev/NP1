@@ -1,6 +1,8 @@
 # ======= services/usuarios.py =======
 import json, os, bcrypt
 from utils.validacoes import validar_email, validar_senha, validar_cpf
+import getpass
+
 
 def carregar_usuarios():
     try:
@@ -42,7 +44,7 @@ def cadastrar_usuario():
         print('E-mail inválido. Tente novamente.')
 
     while True:
-        senha = input('Senha (mínimo 8 caracteres, com maiúscula, minúscula, número e símbolo): ')
+        senha = getpass.getpass('Senha (mínimo 8 caracteres, com maiúscula, minúscula, número e símbolo): ')
         if validar_senha(senha):
             break
         print('Senha fraca. Tente novamente.')
@@ -57,11 +59,14 @@ def cadastrar_usuario():
     usuarios.append({ 'cpf': cpf, 'nome': nome, 'email': email, 'senha': senha_hash, 'perfil': perfil })
     salvar_usuarios(usuarios)
     print('Usuário cadastrado com sucesso!')
+    print('\n🔒 Seus dados estão protegidos conforme a Lei Geral de Proteção de Dados (LGPD).')
+    print('Utilizamos boas práticas de segurança para garantir a privacidade das suas informações.\n')
+
 
 def autenticar():
     usuarios = carregar_usuarios()
     cpf = input('CPF: ')
-    senha = input('Senha: ')
+    senha = getpass.getpass('Senha: ')
     usuario = next((u for u in usuarios if u['cpf'] == cpf), None)
 
     if usuario and verificar_senha(senha, usuario['senha']):
