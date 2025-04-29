@@ -75,3 +75,25 @@ def autenticar():
     else:
         print('CPF ou senha inválidos.')
         return None
+    
+def redefinir_senha():
+    usuarios = carregar_usuarios()
+    cpf = input('Digite seu CPF para redefinir a senha: ')
+    usuario = next((u for u in usuarios if u['cpf'] == cpf), None)
+
+    if not usuario:
+        print('Usuário não encontrado.')
+        return
+
+    print(f"Usuário encontrado: {usuario['nome']}")
+    print("Vamos definir uma nova senha.")
+
+    while True:
+        nova_senha = getpass.getpass('Nova senha (oculta): ')
+        if validar_senha(nova_senha):
+            break
+        print('Senha fraca. Use letras maiúsculas, minúsculas, números e símbolos.')
+
+    usuario['senha'] = hash_senha(nova_senha)
+    salvar_usuarios(usuarios)
+    print('Senha atualizada com sucesso!')

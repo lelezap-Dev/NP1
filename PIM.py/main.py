@@ -11,7 +11,7 @@ from services.relatorios import exportar_relatorio_txt
 from services.relatorios import exportar_relatorio_txt, exportar_relatorio_json
 from services.conteudos import criar_conteudo, visualizar_conteudos, deletar_conteudo
 from services.sessoes import registrar_login, registrar_logout, exibir_sessoes_usuario
-
+from services.usuarios import cadastrar_usuario, autenticar, redefinir_senha
 
 def menu_aluno(usuario):
     while True:
@@ -23,7 +23,7 @@ def menu_aluno(usuario):
         op = input('Escolha: ')
 
         if op == '1':
-            visualizar_conteudos()
+            visualizar_conteudos(usuario['nome'])
         elif op == '2':
             responder_conteudo(usuario)
         elif op == '3':
@@ -45,14 +45,15 @@ def menu_administrador(usuario):
         print('6. Exportar relatório em TXT')
         print('7. Deletar conteúdo')
         print('8. Exportar relatório em JSON')
-        print('9. Sair')
+        print('9. Ver sessões de um usuário')
+        print('10. Sair')
         op = input('Escolha: ')
 
         if op == '1':
             criar_conteudo()
         elif op == '2':
             cpf = input('Digite o CPF do usuário: ')
-            relatorio_usuario(cpf, usuario)
+            relatorio_usuario(cpf)
         elif op == '3':
             gerar_grafico_media_usuarios()
         elif op == '4':
@@ -68,7 +69,10 @@ def menu_administrador(usuario):
             cpf = input('Digite o CPF do usuário para exportar (JSON): ')
             exportar_relatorio_json(cpf)
         elif op == '9':
-            registrar_login(usuario['cpf'])
+            cpf = input('Digite o CPF do usuário: ')
+            exibir_sessoes_usuario(cpf)
+        elif op == '10':
+            registrar_logout(usuario['cpf'])
             break
         else:
             print('Opção inválida.')
@@ -78,7 +82,8 @@ if __name__ == '__main__':
         print('\n--- Sistema Educacional ---')
         print('1. Cadastrar usuário')
         print('2. Entrar')
-        print('3. Sair')
+        print('3. Esqueci minha senha')
+        print('4. Sair')
         escolha = input('Escolha: ')
 
         if escolha == '1':
@@ -91,6 +96,8 @@ if __name__ == '__main__':
                 elif usuario['perfil'] == 'Administrador':
                     menu_administrador(usuario)
         elif escolha == '3':
+            redefinir_senha()
+        elif escolha == '4':
             break
         else:
             print('Opção inválida.')

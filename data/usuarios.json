@@ -38,7 +38,7 @@
         "cpf": "38630096810",
         "nome": "lele",
         "email": "lele@g.com",
-        "senha": "$2b$12$1.t6yXcyHtenQbaseNPB2ehHN2bZSszD5F/3AsIXo2brTgLysGZ16",
+        "senha": "$2b$12$mlRv4kKTmws8UyTHHD1GB.RHHOkZnVPd9WqziuJseIZtCocL8RWca",
         "perfil": "Aluno"
     },
     {
@@ -88,6 +88,20 @@
         "nome": "adminzin",
         "email": "lele@g.com",
         "senha": "$2b$12$yzKOEXGli88mHkBHhYMqR.8.r0gMnJlJruFcjN/E/iLp1dHxqSM3W",
+        "perfil": "Administrador"
+    },
+    {
+        "cpf": "94557489591",
+        "nome": "admlindo",
+        "email": "adm@g.com",
+        "senha": "$2b$12$H3qUhyEqIQnMrNmFDdTyneYlMz0vOFZJDGFe89QE7yPDKLpz.irGm",
+        "perfil": "Administrador"
+    },
+    {
+        "cpf": "66666666666",
+        "nome": "tron",
+        "email": "tron@g.com",
+        "senha": "$2b$12$URUpUdxR.RDg1t2y4QTpXujRqgCRy8L4c8Dr4Co8p4I0yF3UshEi2",
         "perfil": "Administrador"
     }
 ]

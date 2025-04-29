@@ -1,5 +1,6 @@
 # ======= services/conteudos.py =======
 import json, os
+from services.leitura import registrar_leitura
 
 def carregar_conteudos():
     try:
@@ -64,10 +65,11 @@ def criar_conteudo():
     salvar_conteudos(conteudos)
     print('Conteúdo criado com sucesso!')
 
-def visualizar_conteudos():
+def visualizar_conteudos(nome_usuario):
     conteudos = carregar_conteudos()
     for c in conteudos:
         print(f"\nTítulo: {c['titulo']}\nTema: {c['tema']}\nDescrição: {c['descricao']}\n")
+        registrar_leitura(nome_usuario, c['titulo'])
         
 def deletar_conteudo():
     conteudos = carregar_conteudos()

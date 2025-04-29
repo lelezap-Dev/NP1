@@ -1,6 +1,8 @@
 # ======= services/quiz.py =======
 import json
 from services.conteudos import carregar_conteudos
+import random
+from services.leitura import ja_visualizou_conteudo
 
 def carregar_resultados():
     try:
@@ -29,19 +31,28 @@ def responder_conteudo(usuario):
     except ValueError:
         print('Entrada inválida.')
         return
+    
+    titulo = conteudos[escolha]['titulo']
+    if not ja_visualizou_conteudo(usuario['nome'], titulo):
+        print(f"Você ainda não visualizou o conteúdo '{titulo}'. Acesse-o antes de realizar a avaliação.")
+        return
 
     pontuacao = 0
     total = len(conteudos[escolha]['perguntas'])
     for p in conteudos[escolha]['perguntas']:
         print(f"\n{p['pergunta']}")
-        for i, alt in enumerate(p['alternativas']):
-            print(f"{i+1}. {alt}")
-        try:
-            resp = int(input('Sua resposta: ')) - 1
-            if p['alternativas'][resp] == p['resposta_correta']:
-                pontuacao += 1
-        except (ValueError, IndexError):
-            print('Resposta inválida.')
+    alternativas_embaralhadas = p['alternativas'][:]
+    random.shuffle(alternativas_embaralhadas)
+
+    for i, alt in enumerate(alternativas_embaralhadas):
+        print(f"{i+1}. {alt}")
+
+    try:
+        resp = int(input('Sua resposta: ')) - 1
+        if alternativas_embaralhadas[resp] == p['resposta_correta']:
+            pontuacao += 1
+    except (ValueError, IndexError):
+        print('Resposta inválida.')
 
     print(f"Você acertou {pontuacao}/{total}!")
     resultados = carregar_resultados()
