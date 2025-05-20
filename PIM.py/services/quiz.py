@@ -31,7 +31,7 @@ def responder_conteudo(usuario):
     except ValueError:
         print('Entrada inválida.')
         return
-    
+
     titulo = conteudos[escolha]['titulo']
     if not ja_visualizou_conteudo(usuario['nome'], titulo):
         print(f"Você ainda não visualizou o conteúdo '{titulo}'. Acesse-o antes de realizar a avaliação.")
@@ -39,24 +39,29 @@ def responder_conteudo(usuario):
 
     pontuacao = 0
     total = len(conteudos[escolha]['perguntas'])
+
     for p in conteudos[escolha]['perguntas']:
         print(f"\n{p['pergunta']}")
-    alternativas_embaralhadas = p['alternativas'][:]
-    random.shuffle(alternativas_embaralhadas)
+        alternativas_embaralhadas = p['alternativas'][:]
+        random.shuffle(alternativas_embaralhadas)
 
-    for i, alt in enumerate(alternativas_embaralhadas):
-        print(f"{i+1}. {alt}")
+        for i, alt in enumerate(alternativas_embaralhadas):
+            print(f"{i+1}. {alt}")
+        try:
+            resp = int(input('Sua resposta: ')) - 1
+            if alternativas_embaralhadas[resp] == p['resposta_correta']:
+                pontuacao += 1
+        except (ValueError, IndexError):
+            print('Resposta inválida.')
 
-    try:
-        resp = int(input('Sua resposta: ')) - 1
-        if alternativas_embaralhadas[resp] == p['resposta_correta']:
-            pontuacao += 1
-    except (ValueError, IndexError):
-        print('Resposta inválida.')
-
-    print(f"Você acertou {pontuacao}/{total}!")
+    print(f"\nVocê acertou {pontuacao}/{total}!")
     resultados = carregar_resultados()
-    resultados.append({ 'cpf': usuario['cpf'], 'conteudo': conteudos[escolha]['titulo'], 'acertos': pontuacao, 'total': total })
+    resultados.append({
+        'cpf': usuario['cpf'],
+        'conteudo': titulo,
+        'acertos': pontuacao,
+        'total': total
+    })
     salvar_resultados(resultados)
 
 def relatorio_pessoal(cpf):

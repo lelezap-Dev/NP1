@@ -1,6 +1,6 @@
 # ======= main.py =======
 from services.usuarios import cadastrar_usuario, autenticar
-from services.conteudos import criar_conteudo, visualizar_conteudos
+from services.conteudos import criar_conteudo
 from services.quiz import responder_conteudo, relatorio_usuario, relatorio_pessoal
 from services.graficos import (
     gerar_grafico_media_usuarios,
@@ -9,9 +9,10 @@ from services.graficos import (
 )
 from services.relatorios import exportar_relatorio_txt
 from services.relatorios import exportar_relatorio_txt, exportar_relatorio_json
-from services.conteudos import criar_conteudo, visualizar_conteudos, deletar_conteudo
+from services.conteudos import criar_conteudo, deletar_conteudo
 from services.sessoes import registrar_login, registrar_logout, exibir_sessoes_usuario
 from services.usuarios import cadastrar_usuario, autenticar, redefinir_senha
+from services.sessoes import visualizar_conteudos_por_tema
 
 def menu_aluno(usuario):
     while True:
@@ -20,10 +21,11 @@ def menu_aluno(usuario):
         print('2. Realizar avaliações')
         print('3. Ver seu desempenho')
         print('4. Sair')
+        print('5. Emitir certificado de curso')
         op = input('Escolha: ')
 
         if op == '1':
-            visualizar_conteudos(usuario['nome'])
+            visualizar_conteudos_por_tema(usuario['nome'])
         elif op == '2':
             responder_conteudo(usuario)
         elif op == '3':
@@ -31,6 +33,9 @@ def menu_aluno(usuario):
         elif op == '4':
             registrar_logout(usuario['cpf'])
             break
+        elif op == '5':
+            from services.certificados import gerar_certificado
+            gerar_certificado(usuario)
         else:
             print('Opção inválida.')
 
@@ -90,6 +95,7 @@ if __name__ == '__main__':
             cadastrar_usuario()
         elif escolha == '2':
             usuario = autenticar()
+            registrar_login(usuario['cpf'])
             if usuario:
                 if usuario['perfil'] == 'Aluno':
                     menu_aluno(usuario)
@@ -98,6 +104,7 @@ if __name__ == '__main__':
         elif escolha == '3':
             redefinir_senha()
         elif escolha == '4':
+            registrar_logout(usuario['cpf'])
             break
         else:
             print('Opção inválida.')

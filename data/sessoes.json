@@ -1,1 +1,38 @@
-[]
+[
+    {
+        "cpf": "38630096810",
+        "inicio": "2025-05-20 15:05:01",
+        "fim": "2025-05-20 15:05:40",
+        "duracao_minutos": 0.67
+    },
+    {
+        "cpf": "94557489591",
+        "inicio": "2025-05-20 15:06:01",
+        "fim": null,
+        "duracao_minutos": null
+    },
+    {
+        "cpf": "38630096810",
+        "inicio": "2025-05-20 15:23:34",
+        "fim": null,
+        "duracao_minutos": null
+    },
+    {
+        "cpf": "38630096810",
+        "inicio": "2025-05-20 15:25:17",
+        "fim": null,
+        "duracao_minutos": null
+    },
+    {
+        "cpf": "38630096810",
+        "inicio": "2025-05-20 15:40:37",
+        "fim": "2025-05-20 15:43:43",
+        "duracao_minutos": 3.11
+    },
+    {
+        "cpf": "94557489591",
+        "inicio": "2025-05-20 15:45:16",
+        "fim": null,
+        "duracao_minutos": null
+    }
+]
