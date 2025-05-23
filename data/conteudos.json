@@ -79,22 +79,5 @@
                 ]
             }
         ]
-    },
-    {
-        "tema": "Ti",
-        "titulo": "oi",
-        "descricao": "popopoopoo",
-        "perguntas": [
-            {
-                "pergunta": "que dia \u00e9 hoje",
-                "resposta_correta": "terca",
-                "alternativas": [
-                    "terca",
-                    "hoje",
-                    "ontem",
-                    "anteontem"
-                ]
-            }
-        ]
     }
 ]

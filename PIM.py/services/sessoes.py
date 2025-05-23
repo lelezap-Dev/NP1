@@ -81,3 +81,83 @@ def visualizar_conteudos_por_tema(nome_usuario):
     for c in conteudos_filtrados:
         print(f"\nTítulo: {c['titulo']}\nDescrição: {c['descricao']}")
         registrar_leitura(nome_usuario, c['titulo'])
+        
+def listar_conteudos():
+    from services.conteudos import carregar_conteudos
+    conteudos = carregar_conteudos()
+    if not conteudos:
+        print("Nenhum conteúdo cadastrado.")
+        return
+    print("\n📚 Todos os Conteúdos:")
+    for i, c in enumerate(conteudos):
+        print(f"{i+1}. {c['titulo']} - {c['tema']}: {c['descricao']}")
+
+def editar_conteudo():
+    from services.conteudos import carregar_conteudos, salvar_conteudos
+    conteudos = carregar_conteudos()
+    if not conteudos:
+        print("Nenhum conteúdo para editar.")
+        return
+
+    listar_conteudos()
+    try:
+        escolha = int(input("Digite o número do conteúdo que deseja editar: ")) - 1
+        if escolha < 0 or escolha >= len(conteudos):
+            print("Opção inválida.")
+            return
+    except ValueError:
+        print("Entrada inválida.")
+        return
+
+    conteudo = conteudos[escolha]
+    print(f"Editando: {conteudo['titulo']} ({conteudo['tema']})")
+    conteudo['titulo'] = input("Novo título (ou Enter para manter): ") or conteudo['titulo']
+    conteudo['descricao'] = input("Nova descrição (ou Enter para manter): ") or conteudo['descricao']
+    salvar_conteudos(conteudos)
+    print("✅ Conteúdo atualizado com sucesso!")
+
+def listar_usuarios():
+    from services.usuarios import carregar_usuarios
+    usuarios = carregar_usuarios()
+    if not usuarios:
+        print("Nenhum usuário cadastrado.")
+        return
+
+    print("\n👥 Lista de Usuários:")
+    for u in usuarios:
+        print(f"CPF: {u['cpf']} | Nome: {u['nome']} | E-mail: {u['email']} | Perfil: {u['perfil']}")
+
+def editar_usuario():
+    from services.usuarios import carregar_usuarios, salvar_usuarios
+    usuarios = carregar_usuarios()
+    cpf = input("Digite o CPF do usuário que deseja editar: ")
+    usuario = next((u for u in usuarios if u['cpf'] == cpf), None)
+    if not usuario:
+        print("Usuário não encontrado.")
+        return
+
+    print(f"Editando usuário: {usuario['nome']}")
+    usuario['nome'] = input("Novo nome (ou Enter para manter): ") or usuario['nome']
+    usuario['email'] = input("Novo e-mail (ou Enter para manter): ") or usuario['email']
+    novo_perfil = input("Novo perfil (Aluno, Instrutor, Administrador): ").capitalize()
+    if novo_perfil in ['Aluno', 'Instrutor', 'Administrador']:
+        usuario['perfil'] = novo_perfil
+    salvar_usuarios(usuarios)
+    print("✅ Usuário atualizado com sucesso!")
+
+def excluir_usuario():
+    from services.usuarios import carregar_usuarios, salvar_usuarios
+    usuarios = carregar_usuarios()
+    cpf = input("Digite o CPF do usuário que deseja excluir: ")
+    usuario = next((u for u in usuarios if u['cpf'] == cpf), None)
+    if not usuario:
+        print("Usuário não encontrado.")
+        return
+
+    confirm = input(f"Tem certeza que deseja excluir {usuario['nome']}? (s/n): ").lower()
+    if confirm == 's':
+        usuarios = [u for u in usuarios if u['cpf'] != cpf]
+        salvar_usuarios(usuarios)
+        print("✅ Usuário excluído com sucesso.")
+    else:
+        print("Operação cancelada.")
