@@ -27,36 +27,9 @@
         ]
     },
     {
-        "tema": "Programa\u00e7\u00e3o B\u00e1sica",
-        "titulo": "Boas praticas",
-        "descricao": "Introdu\u00e7\u00e3o aos conceitos fundamentais de programa\u00e7\u00e3o.",
-        "perguntas": [
-            {
-                "pergunta": "Qual linguagem \u00e9 comumente usada para iniciar na programa\u00e7\u00e3o?",
-                "resposta_correta": "Python",
-                "alternativas": [
-                    "Python",
-                    "Assembly",
-                    "C++",
-                    "Ruby"
-                ]
-            },
-            {
-                "pergunta": "O que \u00e9 um loop em programa\u00e7\u00e3o?",
-                "resposta_correta": "Uma estrutura de repeti\u00e7\u00e3o",
-                "alternativas": [
-                    "Uma estrutura de repeti\u00e7\u00e3o",
-                    "Uma fun\u00e7\u00e3o de c\u00e1lculo",
-                    "Um m\u00e9todo de ordena\u00e7\u00e3o",
-                    "Um sistema de seguran\u00e7a"
-                ]
-            }
-        ]
-    },
-    {
         "tema": "Ti",
-        "titulo": "Teste",
-        "descricao": "Teste",
+        "titulo": "Video pim",
+        "descricao": "PIM",
         "perguntas": [
             {
                 "pergunta": "video teste",

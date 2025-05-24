@@ -110,5 +110,53 @@
         "senha": "$2b$12$OYgGSCCIQRTa8NOnHozndujzfOxYXdiap6NkaK.KVzhkWEjZoZiEm",
         "perfil": "Administrador",
         "palavra_chave": "Dica"
+    },
+    {
+        "cpf": "38630096822",
+        "nome": "Leandro",
+        "email": "Leandro@gmai.com",
+        "senha": "$2b$12$NLRyTYnpVVcdIZkBErbsN.qSVp4t95UYmiuQH5Bvx6Q4qutKQA2/K",
+        "perfil": "Aluno",
+        "palavra_chave": "Dica"
+    },
+    {
+        "cpf": "38630096899",
+        "nome": "Leandro",
+        "email": "Leandro@gmail.com",
+        "senha": "$2b$12$xjpuaVWrVl/7LsZTi4/ToO3m8sny.aD/YYdB5NnTvG4wpb/lJ53R.",
+        "perfil": "Aluno",
+        "palavra_chave": "Dica"
+    },
+    {
+        "cpf": "94557489592",
+        "nome": "admTeste",
+        "email": "adm@gmail.com",
+        "senha": "$2b$12$PNXlZS38izXPZZaZ9X0oTOVD2.TomKRjfI/AvuWg6ZhIJdOiV8/Ia",
+        "perfil": "Administrador",
+        "palavra_chave": "Dica"
+    },
+    {
+        "cpf": "38630096877",
+        "nome": "Pedro",
+        "email": "Pedro@gmail.com",
+        "senha": "$2b$12$vD6xEpoMwaSBpyMEI9PlIeFhqUIOohIovFIYYkBinbk0s1oThOMoa",
+        "perfil": "Aluno",
+        "palavra_chave": "Dica"
+    },
+    {
+        "cpf": "38630096855",
+        "nome": "Leandrooo",
+        "email": "Leandro@gamil.com",
+        "senha": "$2b$12$Z5DTr2FcUlOJdLrf.CDcguBwbkBED8gmgCjiQ957koZ3JEQryXJhC",
+        "perfil": "Aluno",
+        "palavra_chave": "Dica"
+    },
+    {
+        "cpf": "94557489500",
+        "nome": "admTeste",
+        "email": "admteste@gmail.com",
+        "senha": "$2b$12$ZhPsw2gcpCW/.sjMGt53YuD7bGmAKBO07IbGmXF6STmCXypZaPIrC",
+        "perfil": "Administrador",
+        "palavra_chave": "Dica"
     }
 ]

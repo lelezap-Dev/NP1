@@ -12,7 +12,20 @@
     {
         "nome": "Leandro",
         "conteudos_vistos": [
-            "Fundamentos da Programação"
+            "Fundamentos da Programação",
+            "Teste"
+        ]
+    },
+    {
+        "nome": "Pedro",
+        "conteudos_vistos": [
+            "Cibersegurança"
+        ]
+    },
+    {
+        "nome": "Leandrooo",
+        "conteudos_vistos": [
+            "Cibersegurança"
         ]
     }
 ]
