@@ -139,11 +139,17 @@ def editar_usuario():
     print(f"Editando usuário: {usuario['nome']}")
     usuario['nome'] = input("Novo nome (ou Enter para manter): ") or usuario['nome']
     usuario['email'] = input("Novo e-mail (ou Enter para manter): ") or usuario['email']
-    novo_perfil = input("Novo perfil (Aluno, Instrutor, Administrador): ").capitalize()
+    novo_perfil = input("Novo perfil (Aluno, Instrutor, Administrador) ou Enter para manter: ").capitalize()
     if novo_perfil in ['Aluno', 'Instrutor', 'Administrador']:
         usuario['perfil'] = novo_perfil
+
+    nova_chave = input("Nova palavra-chave secreta (ou Enter para manter): ")
+    if nova_chave:
+        usuario['palavra_chave'] = nova_chave
+
     salvar_usuarios(usuarios)
     print("✅ Usuário atualizado com sucesso!")
+
 
 def excluir_usuario():
     from services.usuarios import carregar_usuarios, salvar_usuarios
@@ -161,3 +167,33 @@ def excluir_usuario():
         print("✅ Usuário excluído com sucesso.")
     else:
         print("Operação cancelada.")
+    
+    # ======= Ranking de desempenho dos alunos =======
+def ranking_geral():
+    from services.quiz import carregar_resultados
+    from services.usuarios import carregar_usuarios
+
+    resultados = carregar_resultados()
+    usuarios = carregar_usuarios()
+
+    desempenho = {}
+    for r in resultados:
+        nome = next((u['nome'] for u in usuarios if u['cpf'] == r['cpf']), None)
+        if not nome:
+            continue
+        if nome not in desempenho:
+            desempenho[nome] = {'acertos': 0, 'total': 0}
+        desempenho[nome]['acertos'] += r['acertos']
+        desempenho[nome]['total'] += r['total']
+
+    ranking = []
+    for nome, d in desempenho.items():
+        media = round((d['acertos'] / d['total']) * 10, 2) if d['total'] > 0 else 0
+        ranking.append((nome, media))
+
+    ranking.sort(key=lambda x: x[1], reverse=True)
+
+    print("\n🏆 Ranking dos Alunos por Desempenho:")
+    for i, (nome, media) in enumerate(ranking, 1):
+        destaque = "🥇" if i == 1 else "🥈" if i == 2 else "🥉" if i == 3 else "⭐"
+        print(f"{i}. {nome} - Média: {media}/10 {destaque}")

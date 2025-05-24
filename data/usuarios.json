@@ -1,45 +1,11 @@
 [
     {
-        "cpf": "457",
-        "nome": "lele",
-        "email": "lele@",
-        "senha": "$2b$12$CeFx8pVPUdO/FSHMVPZrAuhepMRxalaPafGsQ4Y3F.UBhtiEDUheu",
-        "perfil": "Aluno"
-    },
-    {
-        "cpf": "899",
-        "nome": "tron",
-        "email": "tron@",
-        "senha": "$2b$12$Gn6Y/K/m3H3x/bXYJ45eRONLVAVkeUQlpxCgtON0ReO4Vq59xCBlm",
-        "perfil": "Instrutor"
-    },
-    {
-        "cpf": "574",
-        "nome": "uiuiui",
-        "email": "uiui@",
-        "senha": "$2b$12$xyunIak8LJP6wK/6.G8teuP5p0Qjl/tPD8hS3QZWmYDztM8BVBiJu",
-        "perfil": "Administrador"
-    },
-    {
-        "cpf": "3322",
-        "nome": "lelelele",
-        "email": "lele@z.com",
-        "senha": "$2b$12$Xj4kd0WS42D/vyWLOTenhObVarwJqqZrkl2rXxPQXR0xGxoPHY1aC",
-        "perfil": "Aluno"
-    },
-    {
-        "cpf": "3344",
-        "nome": "lele",
-        "email": "lele",
-        "senha": "$2b$12$3tY3AOLPg/ecY.D0vA4xM.Q3fZ.0A4u/Tq.eoRin3Yl1cOAAM4MKi",
-        "perfil": "Aluno"
-    },
-    {
         "cpf": "38630096810",
         "nome": "lele",
         "email": "lele@g.com",
-        "senha": "$2b$12$mlRv4kKTmws8UyTHHD1GB.RHHOkZnVPd9WqziuJseIZtCocL8RWca",
-        "perfil": "Aluno"
+        "senha": "$2b$12$URovuOhlweaGO1u9SZSWXOCIZMpAtMdVA1iAGqQYJf5tdzHEwq1Ui",
+        "perfil": "Aluno",
+        "palavra_chave": "Lindo"
     },
     {
         "cpf": "94557489596",
@@ -85,16 +51,47 @@
     },
     {
         "cpf": "94557489591",
-        "nome": "admlindo",
+        "nome": "superADM",
         "email": "adm@g.com",
-        "senha": "$2b$12$H3qUhyEqIQnMrNmFDdTyneYlMz0vOFZJDGFe89QE7yPDKLpz.irGm",
+        "senha": "$2b$12$2JzP3XacF/3IAqB0nglCxO75/IFOnhJifm9EJCGhKp.yjOUCSvAne",
+        "perfil": "Administrador",
+        "palavra_chave": "TESTE"
+    },
+    {
+        "cpf": "45557489591",
+        "nome": "Jorge ben Jor",
+        "email": "jorge@gmail.com",
+        "senha": "$2b$12$hZNlYoLyj369mAqVUHsozeeRPlHDIPF1QpXLoImFbT.ie6m5piQa.",
+        "perfil": "Aluno"
+    },
+    {
+        "cpf": "38630096811",
+        "nome": "Borges",
+        "email": "Borges@gmail.com",
+        "senha": "$2b$12$4Cfeqfd.GZ5KXfDQ7tYe2OpbwoH9J4/bAaqK/B81niL4p.Zm4icH.",
         "perfil": "Administrador"
     },
     {
-        "cpf": "66666666666",
-        "nome": "tron",
-        "email": "tron@g.com",
-        "senha": "$2b$12$URUpUdxR.RDg1t2y4QTpXujRqgCRy8L4c8Dr4Co8p4I0yF3UshEi2",
+        "cpf": "38630096814",
+        "nome": "Borges",
+        "email": "Borges@gmail.com",
+        "senha": "$2b$12$HZt0G.pYNso0Qh4JNzypAusPr/6kJ6DAuhpyUaZn8g0PJTfdgnzES",
         "perfil": "Administrador"
+    },
+    {
+        "cpf": "38630096812",
+        "nome": "Porto",
+        "email": "porto@g.com",
+        "senha": "$2b$12$9Y/FcWvVnCCBq89M.EJQ5uM1C93iO0tHJ5/a5hDk/Murs51TKNBny",
+        "perfil": "Aluno",
+        "palavra_chave": "VIDA"
+    },
+    {
+        "cpf": "38630096850",
+        "nome": "Thomaz",
+        "email": "thomaz@gmail.com",
+        "senha": "$2b$12$m5/G5QAVoazTguAesmYvbeTKCW0yvGqJd3sCzz0yAG0GCHlQrmBEy",
+        "perfil": "Aluno",
+        "palavra_chave": "Vida"
     }
 ]

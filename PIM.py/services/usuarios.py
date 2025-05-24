@@ -48,6 +48,8 @@ def cadastrar_usuario():
         if validar_senha(senha):
             break
         print('Senha fraca. Tente novamente.')
+    
+    palavra_chave = input("Informe uma palavra-chave secreta para recuperação de senha: ")
 
     while True:
         perfil = input('Perfil (Aluno ou Administrador): ').capitalize()
@@ -56,7 +58,7 @@ def cadastrar_usuario():
         print('Perfil inválido. Tente novamente.')
 
     senha_hash = hash_senha(senha)
-    usuarios.append({ 'cpf': cpf, 'nome': nome, 'email': email, 'senha': senha_hash, 'perfil': perfil })
+    usuarios.append({ 'cpf': cpf, 'nome': nome, 'email': email, 'senha': senha_hash, 'perfil': perfil, 'palavra_chave': palavra_chave })
     salvar_usuarios(usuarios)
     print('Usuário cadastrado com sucesso!')
     print('\n🔒 Seus dados estão protegidos conforme a Lei Geral de Proteção de Dados (LGPD).')
@@ -83,6 +85,11 @@ def redefinir_senha():
 
     if not usuario:
         print('Usuário não encontrado.')
+        return
+
+    chave = input("Digite sua palavra-chave secreta: ")
+    if chave != usuario.get('palavra_chave'):
+        print("Palavra-chave incorreta.")
         return
 
     print(f"Usuário encontrado: {usuario['nome']}")

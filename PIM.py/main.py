@@ -13,6 +13,8 @@ from services.conteudos import criar_conteudo, deletar_conteudo
 from services.sessoes import registrar_login, registrar_logout, exibir_sessoes_usuario
 from services.usuarios import cadastrar_usuario, autenticar, redefinir_senha
 from services.sessoes import visualizar_conteudos_por_tema, listar_conteudos, editar_conteudo, listar_usuarios, excluir_usuario, editar_usuario
+from services.sessoes import ranking_geral
+from services.certificados import gerar_certificado
 
 def menu_aluno(usuario):
     while True:
@@ -20,10 +22,12 @@ def menu_aluno(usuario):
         print('1. Visualizar conteúdos')
         print('2. Realizar avaliações')
         print('3. Ver seu desempenho')
-        print('4. Sair')
-        print('5. Emitir certificado de curso')
+        print('4. Emitir certificado de curso')
+        print('5. Ver ranking dos alunos')
+        print('6. Sair')
+        
         op = input('Escolha: ')
-
+        
         if op == '1':
             visualizar_conteudos_por_tema(usuario['nome'])
         elif op == '2':
@@ -31,13 +35,15 @@ def menu_aluno(usuario):
         elif op == '3':
             relatorio_pessoal(usuario['cpf'])
         elif op == '4':
+            gerar_certificado(usuario)
+        elif op == '5':
+            ranking_geral() 
+        elif op == '6':
             registrar_logout(usuario['cpf'])
             break
-        elif op == '5':
-            from services.certificados import gerar_certificado
-            gerar_certificado(usuario)
         else:
             print('Opção inválida.')
+
 
 # ======= Submenus para administrador =======
 def crud_usuarios():
@@ -61,7 +67,6 @@ def crud_usuarios():
             print("Opção inválida.")
 
 def crud_conteudos():
-    from services.conteudos import criar_conteudo, deletar_conteudo
     while True:
         print("\n--- Gerenciar Conteúdos ---")
         print("1. Criar conteúdo")

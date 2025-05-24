@@ -1,8 +1,8 @@
 [
     {
         "tema": "Tecnologia Da Informa\u00e7\u00e3o",
-        "titulo": "Introdu\u00e7\u00e3o \u00e0 TI",
-        "descricao": "Conceitos b\u00e1sicos sobre Tecnologia da Informa\u00e7\u00e3o.",
+        "titulo": "Ciberseguran\u00e7a",
+        "descricao": "Praticas para proteger o sistema",
         "perguntas": [
             {
                 "pergunta": "O que significa a sigla TI?",
