@@ -139,8 +139,8 @@ def editar_usuario():
     print(f"Editando usuário: {usuario['nome']}")
     usuario['nome'] = input("Novo nome (ou Enter para manter): ") or usuario['nome']
     usuario['email'] = input("Novo e-mail (ou Enter para manter): ") or usuario['email']
-    novo_perfil = input("Novo perfil (Aluno, Instrutor, Administrador) ou Enter para manter: ").capitalize()
-    if novo_perfil in ['Aluno', 'Instrutor', 'Administrador']:
+    novo_perfil = input("Novo perfil (Aluno, Administrador) ou Enter para manter: ").capitalize()
+    if novo_perfil in ['Aluno', 'Administrador']:
         usuario['perfil'] = novo_perfil
 
     nova_chave = input("Nova palavra-chave secreta (ou Enter para manter): ")

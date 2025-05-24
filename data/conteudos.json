@@ -28,7 +28,7 @@
     },
     {
         "tema": "Programa\u00e7\u00e3o B\u00e1sica",
-        "titulo": "Fundamentos da Programa\u00e7\u00e3o",
+        "titulo": "Boas praticas",
         "descricao": "Introdu\u00e7\u00e3o aos conceitos fundamentais de programa\u00e7\u00e3o.",
         "perguntas": [
             {
@@ -54,28 +54,18 @@
         ]
     },
     {
-        "tema": "Seguran\u00e7a Digital",
-        "titulo": "Boas Pr\u00e1ticas de Seguran\u00e7a Digital",
-        "descricao": "Aprenda como proteger seus dados na internet.",
+        "tema": "Ti",
+        "titulo": "Teste",
+        "descricao": "Teste",
         "perguntas": [
             {
-                "pergunta": "O que \u00e9 um firewall?",
-                "resposta_correta": "Uma barreira de seguran\u00e7a para redes",
+                "pergunta": "video teste",
+                "resposta_correta": "Teste",
                 "alternativas": [
-                    "Uma barreira de seguran\u00e7a para redes",
-                    "Um software de edi\u00e7\u00e3o de v\u00eddeos",
-                    "Um antiv\u00edrus",
-                    "Um sistema de backup"
-                ]
-            },
-            {
-                "pergunta": "Qual \u00e9 uma boa pr\u00e1tica para criar senhas seguras?",
-                "resposta_correta": "Usar combina\u00e7\u00f5es de letras, n\u00fameros e s\u00edmbolos",
-                "alternativas": [
-                    "Usar combina\u00e7\u00f5es de letras, n\u00fameros e s\u00edmbolos",
-                    "Utilizar apenas n\u00fameros",
-                    "Reutilizar a mesma senha",
-                    "Anotar senhas em locais p\u00fablicos"
+                    "Teste",
+                    "nao",
+                    "sim",
+                    "talvez"
                 ]
             }
         ]
